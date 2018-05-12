@@ -10,7 +10,14 @@ public class Player : MonoBehaviour {
 	float speed = 5f;
 
 	void Start () {
-		
+
+		if (PlayerPrefs.GetInt ("Saved") == 1) {
+
+			float pX = PlayerPrefs.GetFloat ("PlayerX");
+			float pY = PlayerPrefs.GetFloat ("PlayerY");
+			transform.position = new Vector2 (pX, pY);
+		}
+
 		animator = GetComponent<Animator>();
 	}
 

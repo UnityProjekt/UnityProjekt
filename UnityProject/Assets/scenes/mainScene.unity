@@ -96891,6 +96891,8 @@ GameObject:
   - component: {fileID: 2024785524}
   - component: {fileID: 2024785525}
   - component: {fileID: 2024785521}
+  - component: {fileID: 2024785526}
+  - component: {fileID: 2024785527}
   m_Layer: 4
   m_Name: Player
   m_TagString: Player
@@ -97051,6 +97053,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98680bf6e98c6b2488b923c002b71628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2024785526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2024785516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050b30012334c914eb059961ea55c74d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnTxtExit: {fileID: 2800000, guid: 71f6abe7f79d83c488272d6d6e9cf4dd, type: 3}
+  btnTxtSave: {fileID: 2800000, guid: 9c60c58cf134dc74da1e332bba98e05c, type: 3}
+  btnTxtToMenu: {fileID: 2800000, guid: 93dfa2d310d1ead49b8e89117ef4897e, type: 3}
+  skin: {fileID: 11400000, guid: 6e9bd3775acfa8e4dbf4c144c751ea80, type: 2}
+--- !u!114 &2024785527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2024785516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ac53f17ee564347a78ee3640982201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2026543199

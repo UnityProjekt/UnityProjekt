@@ -6,14 +6,23 @@ using UnityEngine.UI;
 public class ZdrowieUI : MonoBehaviour {
 
 	float maxZdrowie;
-	public float obecneZdrowie;
+	float obecneZdrowie;
 	float zdrowie;
+	float zapisaneZdrowie;
 	public GUISkin skin;
 
 	void Start () {
 		maxZdrowie = 100;
-		obecneZdrowie = 100;
-		zdrowie = 100;
+		
+		if (PlayerPrefs.GetInt ("Zaladuj") == 1) {
+			obecneZdrowie = PlayerPrefs.GetFloat ("ZapisaneZdrowie");
+			zdrowie = PlayerPrefs.GetFloat ("ZapisaneZdrowie");
+			PlayerPrefs.SetInt ("Zaladuj", 0);
+			PlayerPrefs.Save ();
+		} else {
+			zdrowie = 100;
+			obecneZdrowie = 100;
+		}
 	}
 
 	void Update () {
@@ -42,12 +51,15 @@ public class ZdrowieUI : MonoBehaviour {
 				zdrowie += Time.deltaTime;
 				obecneZdrowie = Mathf.Round (zdrowie);
 			}
-		} else if (obecneZdrowie < 1) {
+		} else if (obecneZdrowie == 0) {
 			obecneZdrowie = 0;
 		}
 		else {
 			zdrowie -= Time.deltaTime / 3;
 			obecneZdrowie = Mathf.Round (zdrowie);
 		}
+
+		PlayerPrefs.SetFloat ("Zdrowie", obecneZdrowie);
+		PlayerPrefs.Save ();
 	}
 }

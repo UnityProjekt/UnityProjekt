@@ -13,6 +13,11 @@ public class newGame : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void doNewGame()
     {
 		SceneManager.LoadScene("mainScene");
+
+		PlayerPrefs.SetInt ("Saved", 0);
+		PlayerPrefs.SetInt ("Zaladuj", 0);
+		PlayerPrefs.SetInt ("Zdrowie", 100);
+		PlayerPrefs.Save ();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

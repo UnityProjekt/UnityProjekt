@@ -9,18 +9,13 @@ public class loadBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Text theText;
 
-	public float pX, pY;
-
     public void doLoad()
 	{
-		Random.seed = PlayerPrefs.GetInt ("Random");
-		//MapGenerate _Map = new MapGenerate();
-
-		pX = PlayerPrefs.GetFloat ("PlayerX");
-		pY = PlayerPrefs.GetFloat ("PlayerY");
-		transform.position = new Vector2 (pX, pY);
-
 		SceneManager.LoadScene("mainScene");
+
+		PlayerPrefs.SetInt ("Saved", 1);
+		PlayerPrefs.SetInt ("Zaladuj", 1);
+		PlayerPrefs.Save ();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
