@@ -39,6 +39,12 @@ public class ZdrowieUI : MonoBehaviour {
 	}
 
 	void ognisko() {
+		if(PlayerPrefs.GetInt ("Zaladuj") == 1) {
+			zdrowie = PlayerPrefs.GetFloat ("Zdrowie");
+			PlayerPrefs.SetInt ("Zaladuj", 0);
+			PlayerPrefs.Save();
+		}
+
 		if ((transform.position.x > -6 && transform.position.y < 1) && (transform.position.x < 1 && transform.position.y > -5) ||
 		    (transform.position.x > -40 && transform.position.y < -19) && (transform.position.x < -30 && transform.position.y > -29) ||
 		    (transform.position.x > 8 && transform.position.y < -31) && (transform.position.x < 18 && transform.position.y > -41) ||

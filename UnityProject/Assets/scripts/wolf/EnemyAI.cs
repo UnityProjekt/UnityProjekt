@@ -5,7 +5,7 @@ public class EnemyAI : Character {
 	private Transform target;
 	public int moveSpeed;
 	public int rotationSpeed;
-
+	Rigidbody2D r2d;
 
     public Transform Target
 	{
@@ -54,11 +54,17 @@ public class EnemyAI : Character {
         else
 
             direction = Vector2.zero;
+	}
 
-	
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		float playerZdrowie = PlayerPrefs.GetFloat ("Zdrowie");
+		playerZdrowie -= 20;
+		PlayerPrefs.SetFloat ("Zdrowie", playerZdrowie);
+		PlayerPrefs.SetInt ("Zaladuj", 1);
+		PlayerPrefs.Save ();
 
-
-
-			}
-
+		Debug.Log(PlayerPrefs.GetFloat("Zdrowie"));
+		Debug.Log(PlayerPrefs.GetInt("Zaladuj"));
+	}
 }

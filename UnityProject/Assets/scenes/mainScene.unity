@@ -108027,7 +108027,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef005e28b1dff484298dadf5b360d8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obecneZdrowie: 0
   skin: {fileID: 11400000, guid: 1dd69536db18e2141b0b2639979778ac, type: 2}
 --- !u!50 &2024785522
 Rigidbody2D:
