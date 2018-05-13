@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 16268564}
   m_Layer: 9
   m_Name: w_walkright1 (5)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2487,13 +2487,26 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 44776326}
+  - component: {fileID: 44776325}
+  - component: {fileID: 44776327}
   m_Layer: 9
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &44776325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 44776324}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f27c09901ba2e49b5ae8cb02f497c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &44776326
 Transform:
   m_ObjectHideFlags: 0
@@ -2528,6 +2541,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &44776327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 44776324}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2bef9c7ad82584b9dc1c342b1f686f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
 --- !u!1 &45560465
 GameObject:
   m_ObjectHideFlags: 0
@@ -5916,7 +5941,7 @@ GameObject:
   - component: {fileID: 111206581}
   m_Layer: 9
   m_Name: w_walkright1 (2)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6327,7 +6352,7 @@ GameObject:
   - component: {fileID: 116685767}
   m_Layer: 9
   m_Name: w_walkright1 (8)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9705,7 +9730,7 @@ GameObject:
   - component: {fileID: 180188350}
   m_Layer: 9
   m_Name: w_walkright1 (1)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10225,7 +10250,7 @@ GameObject:
   - component: {fileID: 185995335}
   m_Layer: 9
   m_Name: w_walkright1 (8)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15031,7 +15056,7 @@ GameObject:
   - component: {fileID: 275707394}
   m_Layer: 9
   m_Name: w_walkright1 (7)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17130,7 +17155,7 @@ GameObject:
   - component: {fileID: 311094573}
   m_Layer: 9
   m_Name: w_walkright1 (6)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22598,7 +22623,7 @@ GameObject:
   - component: {fileID: 427072163}
   m_Layer: 9
   m_Name: w_walkright1 (7)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29184,7 +29209,7 @@ GameObject:
   - component: {fileID: 554590043}
   m_Layer: 9
   m_Name: w_walkright1 (1)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31059,7 +31084,7 @@ GameObject:
   - component: {fileID: 593535600}
   m_Layer: 9
   m_Name: w_walkright1 (10)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40691,7 +40716,7 @@ GameObject:
   - component: {fileID: 765609446}
   m_Layer: 9
   m_Name: w_walkright1 (4)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45460,7 +45485,7 @@ GameObject:
   - component: {fileID: 849033407}
   m_Layer: 9
   m_Name: w_walkright1 (9)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52768,7 +52793,7 @@ GameObject:
   - component: {fileID: 1022290609}
   m_Layer: 9
   m_Name: w_walkright1
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62639,7 +62664,7 @@ GameObject:
   - component: {fileID: 1199711679}
   m_Layer: 9
   m_Name: w_walkright1 (6)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85763,7 +85788,7 @@ GameObject:
   - component: {fileID: 1585926282}
   m_Layer: 9
   m_Name: w_walkright1 (4)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89909,7 +89934,7 @@ GameObject:
   - component: {fileID: 1664585090}
   m_Layer: 9
   m_Name: w_walkright1 (9)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97656,7 +97681,7 @@ GameObject:
   - component: {fileID: 1803633070}
   m_Layer: 9
   m_Name: w_walkright1 (5)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99649,7 +99674,7 @@ GameObject:
   - component: {fileID: 1842312827}
   m_Layer: 9
   m_Name: w_walkright1 (2)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101758,7 +101783,7 @@ GameObject:
   - component: {fileID: 1882230832}
   m_Layer: 9
   m_Name: w_walkright1 (3)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103092,7 +103117,7 @@ GameObject:
   - component: {fileID: 1907177491}
   m_Layer: 9
   m_Name: w_walkright1 (3)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107982,7 +108007,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2024785516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26, y: 0.43, z: 0}
+  m_LocalPosition: {x: -0.68, y: 1.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -107999,6 +108024,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022d5fd0a0be10f45bf14286d794043e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletToRight: {fileID: 1629478055012848, guid: 747e0ee95e9b1e54a948f84e3c213852,
+    type: 2}
+  bulletToLeft: {fileID: 1695882324052182, guid: 1150cd6a5395b36488973abde1b04401,
+    type: 2}
+  fireRate: 0.2
+  facingRight: 0
+  facingLeft: 0
 --- !u!95 &2024785520
 Animator:
   serializedVersion: 3
@@ -113036,7 +113068,7 @@ GameObject:
   - component: {fileID: 2107694808}
   m_Layer: 9
   m_Name: w_walkright1
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

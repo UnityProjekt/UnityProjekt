@@ -8,8 +8,14 @@ public class Player : MonoBehaviour {
 	Animator animator;
 	Vector2 direction;
 	float speed = 5f;
+    public GameObject bulletToRight, bulletToLeft;
+    Vector2 bulletPos;
+    public float fireRate = 0.5f;
+    float nextFire = 0.0f;
+    public bool facingRight = false;
+    public bool facingLeft = false;
 
-	void Start () {
+    void Start () {
 
 		if (PlayerPrefs.GetInt ("Saved") == 1) {
 
@@ -25,6 +31,14 @@ public class Player : MonoBehaviour {
 
 		Move ();
 		GetInput ();
+
+
+
+        if(Input.GetButtonDown("Fire1") && Time.time>nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            fire();
+        }
 	}
 
 	private void GetInput() {
@@ -33,15 +47,25 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.W)) {
 			direction += Vector2.up;
-		}
-		if (Input.GetKey (KeyCode.A)) {
+            facingRight = false;
+            facingLeft = false;
+
+
+        }
+        if (Input.GetKey (KeyCode.A)) {
 			direction += Vector2.left;
+            facingLeft = true;
+            facingRight = false;
 		}
 		if (Input.GetKey (KeyCode.S)) {
 			direction += Vector2.down;
-		}
+            facingRight = false;
+            facingLeft = false;
+        }
 		if (Input.GetKey (KeyCode.D)) {
 			direction += Vector2.right;
+            facingRight = true;
+            facingLeft = false;
 		}
 	}
 
@@ -66,4 +90,20 @@ public class Player : MonoBehaviour {
 		animator.SetFloat ("x", direction.x);
 		animator.SetFloat ("y", direction.y);
 	}
+
+
+    void fire()
+    {
+        bulletPos = transform.position;
+        if(facingRight)
+        {
+            bulletPos += new Vector2(+1f, -0.43f);
+            Instantiate(bulletToRight, bulletPos,Quaternion.identity);
+        }
+        else
+        {
+            bulletPos += new Vector2(-1f,-0.43f);
+            Instantiate(bulletToLeft, bulletPos, Quaternion.identity);
+        }
+    }
 }

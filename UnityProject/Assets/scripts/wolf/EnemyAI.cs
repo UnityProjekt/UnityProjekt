@@ -21,10 +21,7 @@ public class EnemyAI : Character {
 		}
 
 
-
 	}
-
-
 
 	void Start () {
       
@@ -66,5 +63,12 @@ public class EnemyAI : Character {
 
 		Debug.Log(PlayerPrefs.GetFloat("Zdrowie"));
 		Debug.Log(PlayerPrefs.GetInt("Zaladuj"));
+
+
+        if (col.gameObject.tag.Equals("Bullet"))
+        {
+            Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
 	}
 }
