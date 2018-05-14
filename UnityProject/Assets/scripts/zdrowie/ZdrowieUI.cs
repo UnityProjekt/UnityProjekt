@@ -57,7 +57,7 @@ public class ZdrowieUI : MonoBehaviour {
 				zdrowie += Time.deltaTime;
 				obecneZdrowie = Mathf.Round (zdrowie);
 			}
-		} else if (obecneZdrowie == 0) {
+		} else if (obecneZdrowie < 1) {
 			obecneZdrowie = 0;
 		}
 		else {
